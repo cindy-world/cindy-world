@@ -1,0 +1,43 @@
+body {
+    font-family: 'Gowun Dodum', sans-serif;
+    margin: 0;
+    background-color: #fffdf7;
+    color: #333;
+  }
+  
+  header {
+    text-align: center;
+    padding: 2rem 0;
+  }
+  
+  .logo {
+    width: 160px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    background-color: #fcefee;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .tab {
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .tab:hover,
+  .tab.active {
+    background-color: #ffdde1;
+  }
+  
