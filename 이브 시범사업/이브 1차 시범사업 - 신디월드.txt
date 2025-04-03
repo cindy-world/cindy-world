@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>신디월드에 온 걸 환영해요</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cute+Font&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Nanum Pen Script', cursive;
+      background-color: #fffafc;
+      color: #4b3b47;
+    }
+
+    .cindy-world {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    .cindy-header {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #ff7aa2;
+    }
+
+    .character-card {
+      background-color: #ffe9f3;
+      border-radius: 20px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .character-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #ffbad2;
+      margin-bottom: 1rem;
+    }
+
+    .character-card h2 {
+      margin: 0.5rem 0;
+      font-size: 1.8rem;
+    }
+
+    .diary-entry {
+      background-color: #fef7e5;
+      padding: 1rem;
+      border-radius: 15px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+      margin-bottom: 1.5rem;
+    }
+
+    .diary-entry h3 {
+      margin-top: 0;
+      color: #ff9b7a;
+    }
+
+    .cindy-footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <div class="cindy-world">
+    <header class="cindy-header">🌸 Welcome to Cindy World 🌸</header>
+
+    <section class="character-card">
+      <img src="https://placekitten.com/100/100" alt="신디 캐릭터" />
+      <h2>신디</h2>
+      <p>귀여움과 감성이 가득한 디지털 세계의 주인공</p>
+    </section>
+
+    <section class="diary-entry">
+      <h3>오늘의 기록</h3>
+      <p>🌷 고양이랑 낮잠을 잤어요. 너무 따뜻하고 말랑했어요!</p>
+    </section>
+
+    <footer class="cindy-footer">© 2025 Cindy World</footer>
+  </div>
+</body>
+</html>

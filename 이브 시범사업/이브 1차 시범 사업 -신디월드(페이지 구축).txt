@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>신디월드 탭</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Nanum Pen Script', cursive;
+      background-color: #fffafc;
+      color: #4b3b47;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 200px;
+      background-color: #ffe9f3;
+      padding: 1.5rem;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+      position: fixed;
+      height: 100%;
+      overflow-y: auto;
+    }
+
+    .sidebar h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: #ff7aa2;
+      text-align: center;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar li {
+      margin-bottom: 1rem;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #4b3b47;
+      font-size: 1.2rem;
+      display: block;
+      padding: 0.3rem 0.6rem;
+      border-radius: 10px;
+      transition: background-color 0.2s ease;
+      cursor: pointer;
+    }
+
+    .sidebar a:hover,
+    .sidebar a.active {
+      background-color: #ffd7e8;
+    }
+
+    .main-content {
+      margin-left: 200px;
+      padding: 2rem;
+      width: 100%;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .main-content h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #ff9b7a;
+    }
+
+    .main-content p {
+      font-size: 1.3rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+
+      .main-content {
+        margin-left: 0;
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="sidebar">
+    <h2>🌸 신디월드</h2>
+    <ul>
+      <li><a class="tab-link active" data-tab="diary">🐾 My Diary</a></li>
+      <li><a class="tab-link" data-tab="gallery">🎨 My Gallery</a></li>
+      <li><a class="tab-link" data-tab="voice">🎧 Voice Room</a></li>
+      <li><a class="tab-link" data-tab="letters">💌 Letters from Cindy</a></li>
+      <li><a class="tab-link" data-tab="cozy">🛏 Cozy Zone</a></li>
+      <li><a class="tab-link" data-tab="snapshots">📸 Snapshots</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+    <div id="diary" class="tab-content active">
+      <h1>🐾 My Diary</h1>
+      <p>오늘은 고양이랑 같이 낮잠을 잤어요. 햇살이 따뜻해서 포근했어요 ☀️</p>
+    </div>
+
+    <div id="gallery" class="tab-content">
+      <h1>🎨 My Gallery</h1>
+      <p>이곳은 내가 그린 그림들을 전시하는 공간이에요! (준비 중 🎨)</p>
+    </div>
+
+    <div id="voice" class="tab-content">
+      <h1>🎧 Voice Room</h1>
+      <p>신디의 목소리를 들을 수 있는 공간이에요. 따뜻하고 말랑한 이야기들이 기다리고 있어요 🎙️</p>
+    </div>
+
+    <div id="letters" class="tab-content">
+      <h1>💌 Letters from Cindy</h1>
+      <p>손편지처럼 마음을 담아 쓴 글들을 여기에 모아둘 거예요 💖</p>
+    </div>
+
+    <div id="cozy" class="tab-content">
+      <h1>🛏 Cozy Zone</h1>
+      <p>조용히 쉬고 싶은 날, 여기서 감성을 충전해요 ☕🧸</p>
+    </div>
+
+    <div id="snapshots" class="tab-content">
+      <h1>📸 Snapshots</h1>
+      <p>사진첩 속 신디의 하루들. 오늘도 예쁘게 담았어요! 📷</p>
+    </div>
+  </main>
+
+  <script>
+    const tabLinks = document.querySelectorAll('.tab-link');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        // 탭 활성화 처리
+        tabLinks.forEach(item => item.classList.remove('active'));
+        link.classList.add('active');
+
+        // 콘텐츠 표시
+        const target = link.getAttribute('data-tab');
+        tabContents.forEach(content => {
+          content.classList.remove('active');
+          if (content.id === target) {
+            content.classList.add('active');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
