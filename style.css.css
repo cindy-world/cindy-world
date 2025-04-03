@@ -1,43 +1,70 @@
+/* 전반적인 스타일 */
 body {
-    font-family: 'Gowun Dodum', sans-serif;
-    margin: 0;
-    background-color: #fffdf7;
-    color: #333;
-  }
-  
-  header {
-    text-align: center;
-    padding: 2rem 0;
-  }
-  
-  .logo {
-    width: 160px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-  
-  .tabs {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    padding: 1rem 0;
-    background-color: #fcefee;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-  }
-  
-  .tab {
-    padding: 0.5rem 1rem;
-    background-color: #fff;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  .tab:hover,
-  .tab.active {
-    background-color: #ffdde1;
-  }
-  
+  font-family: 'Gowun Dodum', sans-serif;
+  background-color: #fff7f7;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* 헤더 스타일: 로고와 탭바 */
+header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff0f0;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 100px; /* 로고 크기 조정 */
+  border-radius: 12px;
+  margin-right: 1rem;
+}
+
+.tab-bar {
+  font-size: 1.2rem;
+  color: #d56d7a;
+}
+
+/* 사이드바 스타일: 카테고리 리스트 */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  background-color: #f8f1f1;
+  padding-top: 2rem;
+  border-right: 2px solid #ddd;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 10px;
+  text-align: center;
+}
+
+.sidebar ul li a {
+  color: #d56d7a;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.sidebar ul li a:hover {
+  color: #333;
+}
+
+/* 콘텐츠 영역 */
+main {
+  margin-left: 220px; /* 사이드바가 오른쪽에 있으므로 여백을 추가 */
+  padding: 2rem;
+  text-align: center;
+}
