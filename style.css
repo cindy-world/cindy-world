@@ -40,7 +40,7 @@
     width: 200px;
     background-color: #ffeef1;
     padding: 1rem;
-    min-height: 100vh; /* ✅ 세로 길이 확보 */
+    min-height: 100vh;
   }
   
   .sidebar ul {
@@ -90,12 +90,11 @@
   /* ===== 메인 콘텐츠 영역 ===== */
   main {
     flex: 1;
-    padding: 0;
-    height: 100%;
+    padding: 3rem 0 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
   }
   
   .main-box {
@@ -103,7 +102,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 2rem; /* ✅ 위 여백 추가 */
+    margin-top: 0;
   }
   
   /* === 강아지 말랑 애니메이션 === */
