@@ -94,7 +94,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center; /* 중앙 정렬 */
+  }
+  
+  .main-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
   
   /* === 강아지 말랑 애니메이션 === */
@@ -116,15 +123,8 @@
     }
   }
   
-  .main-box {
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-  
   .main-image {
-    max-width: 300px;
+    max-width: 240px;
     width: 100%;
     height: auto;
     display: block;
