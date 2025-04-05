@@ -10,6 +10,9 @@
     font-family: 'Gowun Dodum', sans-serif;
     background-color: #fff7f7;
     color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
   
   /* ===== 파비콘이 들어간 헤더 ===== */
@@ -78,13 +81,14 @@
   /* ===== 레이아웃 컨테이너 ===== */
   .container {
     display: flex;
+    flex: 1;
     align-items: flex-start;
     justify-content: flex-start;
-    min-height: calc(100vh - 160px);
   }
   
   /* ===== 메인 콘텐츠 영역 ===== */
   main {
+    flex: 1;
     padding: 0;
     height: 100%;
     display: flex;
@@ -113,15 +117,14 @@
   }
   
   .main-box {
-    padding-top: 0;
-    margin-top: 0;
+    margin-top: 1rem;
     display: flex;
     justify-content: center;
     width: 100%;
   }
   
   .main-image {
-    max-width: 320px;
+    max-width: 300px;
     width: 100%;
     height: auto;
     display: block;
@@ -130,11 +133,15 @@
     animation: squishy 4s ease-in-out infinite;
   }
   
-  /* ===== 푸터 박스 ===== */
+  /* ===== 푸터 ===== */
+  footer {
+    background-color: #ffdce0;
+    padding: 1rem;
+    text-align: center;
+  }
+  
   .footer-box {
     height: 60px;
-    background-color: #ffdce0;
-    margin-top: 2rem;
   }
   
   /* ===== 반응형 - 모바일 레이아웃 조정 ===== */
