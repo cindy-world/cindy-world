@@ -134,6 +134,48 @@
     animation: squishy 4s ease-in-out infinite;
   }
   
+/* ===== 사이드바 ===== */
+.sidebar {
+    width: 200px;
+    background-color: #ffeef1;
+    padding: 1rem 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* 위쪽 이미지 */
+  .sidebar-top-image img,
+  .sidebar-bottom-image img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+  /* 사이드 메뉴 */
+  .sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  
+  .sidebar-menu li {
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background 0.2s;
+    font-size: 1.1rem;
+  }
+  
+  .sidebar-menu li:hover {
+    background-color: #f9d4da;
+  }
+
+
   /* ===== 푸터 ===== */
   footer {
     background-color: #ffdce0;
