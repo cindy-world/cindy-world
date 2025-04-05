@@ -1,3 +1,4 @@
+
 /* ===== 공통 스타일 ===== */
 * {
     margin: 0;
@@ -31,12 +32,6 @@
     color: #a8445e;
   }
   
-  /* ===== 레이아웃 메인 컨테이너 ===== */
-  .container {
-    display: flex;
-    min-height: calc(100vh - 100px);
-  }
-  
   /* ===== 사이드바 - 데스크탑용 ===== */
   .sidebar {
     width: 200px;
@@ -58,8 +53,9 @@
   .sidebar ul li:hover {
     background-color: #f9d4da;
   }
-  /* 모바일 슬라이드 탭 */
-.mobile-category {
+  
+  /* ===== 모바일 슬라이드 탭 ===== */
+  .mobile-category {
     display: none;
     overflow-x: auto;
     background-color: #ffeef1;
@@ -79,7 +75,34 @@
     list-style: none;
   }
   
-  /* 반응형 - 모바일일 때 사이드바 숨기고 모바일 카테고리 보여줌 */
+  /* ===== 메인 콘텐츠 영역 ===== */
+  main {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: calc(100vh - 120px);
+  }
+  
+  .main-image {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* ===== 푸터 박스 ===== */
+  .footer-box {
+    height: 60px;
+    background-color: #ffdce0;
+    margin-top: 2rem;
+  }
+  
+  /* ===== 반응형 - 모바일 레이아웃 조정 ===== */
   @media screen and (max-width: 768px) {
     .sidebar {
       display: none;
@@ -88,26 +111,5 @@
     .mobile-category {
       display: block;
     }
-  }
-
-  /* ===== 메인 콘텐츠 영역 ===== */
-main {
-    flex-grow: 1;
-    padding: 2rem;
-    text-align: center;
-    display: flex;
-    flex-direction: column; /* 이미지가 수직으로 배치될 수 있도록 */
-    align-items: center;
-    justify-content: flex-start; /* ← 여기! 중앙이 아니라 위로 */
-    min-height: 200px;
-  }
-  .main-image {
-    max-width: 500px;
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
   
