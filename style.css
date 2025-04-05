@@ -113,3 +113,35 @@
     }
   }
   
+
+  /* === 강아지 말랑 애니메이션 === */
+@keyframes squishy {
+    0% {
+      transform: scale(1) rotate(0deg);
+    }
+    25% {
+      transform: scale(1.03, 0.97) rotate(-1deg);
+    }
+    50% {
+      transform: scale(0.98, 1.02) rotate(1deg);
+    }
+    75% {
+      transform: scale(1.01, 0.99) rotate(-0.5deg);
+    }
+    100% {
+      transform: scale(1) rotate(0deg);
+    }
+  }
+  
+  .main-image {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    
+    /* 애니메이션 추가! */
+    animation: squishy 4s ease-in-out infinite;
+  }
