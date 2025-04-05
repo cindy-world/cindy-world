@@ -1,124 +1,120 @@
-/* 기본 설정 */
-body {
+/* ===== 공통 스타일 ===== */
+* {
     margin: 0;
-    font-family: 'Pretendard', 'Arial', sans-serif;
-    background-color: #fffaf9;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Gowun Dodum', sans-serif;
+    background-color: #fff7f7;
     color: #333;
   }
   
-  /* 헤더 영역 */
+  /* ===== 파비콘이 들어간 헤더 ===== */
   header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-color: #f8d8dd;
     padding: 1rem 2rem;
+    background-color: #ffdce0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   }
   
-  .header-left {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo {
-    width: 50px;
+  header .logo {
+    width: 60px;
     height: auto;
     margin-right: 1rem;
   }
   
-  .site-title {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #a43a57;
+  header h1 {
+    font-size: 1.5rem;
+    color: #a8445e;
   }
   
-  /* 카테고리 바 */
-  .category-bar {
-    background-color: #fbeff1;
-    padding: 0.5rem 1rem;
-  }
-  
-  .category-bar ul {
+  /* ===== 레이아웃 메인 컨테이너 ===== */
+  .container {
     display: flex;
-    justify-content: center;
-    gap: 1.2rem;
+    min-height: calc(100vh - 100px);
+  }
+  
+  /* ===== 사이드바 - 데스크탑용 ===== */
+  .sidebar {
+    width: 200px;
+    background-color: #ffeef1;
+    padding: 1rem;
+  }
+  
+  .sidebar ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
   }
   
-  .category-bar li {
-    padding: 0.5rem 1rem;
-    background-color: #fff;
-    border-radius: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  .sidebar ul li {
+    padding: 0.8rem;
     cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.2s;
+    border-radius: 10px;
+    transition: background 0.2s;
   }
   
-  .category-bar li:hover {
-    background-color: #ffeef3;
+  .sidebar ul li:hover {
+    background-color: #f9d4da;
   }
   
-  /* 메인 이미지 박스 */
+  /* ===== 모바일용 카테고리 바 (슬라이드형) ===== */
+  .mobile-category {
+    display: none;
+    overflow-x: auto;
+    background-color: #ffeef1;
+    padding: 1rem;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .mobile-category li {
+    display: inline-block;
+    margin-right: 1rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+    padding: 0.5rem 0.8rem;
+    background: #fddde4;
+    border-radius: 8px;
+  }
+  
+  /* ===== 메인 콘텐츠 ===== */
   main {
+    flex-grow: 1;
     padding: 2rem;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .content-box {
-    background-color: #fff;
-    border-radius: 20px;
-    padding: 2rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
   }
   
   .main-image {
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     height: auto;
-    display: block;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
   
-  /* 푸터 */
+  /* ===== 푸터 ===== */
   footer {
     text-align: center;
     padding: 1rem;
-    background-color: #f4f4f4;
+    background-color: #ffeef1;
     font-size: 0.9rem;
-    color: #999;
+    color: #888;
   }
   
-  /* 반응형 디자인 */
+  /* ===== 반응형 ===== */
   @media screen and (max-width: 768px) {
-    .category-bar ul {
-      overflow-x: auto;
-      flex-wrap: nowrap;
-      -webkit-overflow-scrolling: touch;
+    .container {
+      flex-direction: column;
     }
   
-    .category-bar li {
-      flex: 0 0 auto;
-      white-space: nowrap;
-      font-size: 0.9rem;
+    .sidebar {
+      display: none;
     }
   
-    .site-title {
-      font-size: 1.4rem;
-    }
-  
-    .logo {
-      width: 40px;
-    }
-  
-    main {
-      padding: 1rem;
-    }
-  
-    .content-box {
-      padding: 1rem;
+    .mobile-category {
+      display: block;
     }
   }
   
