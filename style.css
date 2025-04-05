@@ -89,3 +89,19 @@
       display: block;
     }
   }
+
+  /* ===== 메인 콘텐츠 영역 ===== */
+main {
+    flex-grow: 1;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .main-image {
+    width: 100%;
+    max-width: 500px; /* 너가 원하면 400px으로 줄여도 돼 */
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
