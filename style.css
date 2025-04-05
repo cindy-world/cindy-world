@@ -58,9 +58,8 @@
   .sidebar ul li:hover {
     background-color: #f9d4da;
   }
-  
-  /* ===== 모바일용 카테고리 바 (슬라이드형) ===== */
-  .mobile-category {
+  /* 모바일 슬라이드 탭 */
+.mobile-category {
     display: none;
     overflow-x: auto;
     background-color: #ffeef1;
@@ -77,38 +76,11 @@
     padding: 0.5rem 0.8rem;
     background: #fddde4;
     border-radius: 8px;
+    list-style: none;
   }
   
-  /* ===== 메인 콘텐츠 ===== */
-  main {
-    flex-grow: 1;
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  .main-image {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* ===== 푸터 ===== */
-  footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #ffeef1;
-    font-size: 0.9rem;
-    color: #888;
-  }
-  
-  /* ===== 반응형 ===== */
+  /* 반응형 - 모바일일 때 사이드바 숨기고 모바일 카테고리 보여줌 */
   @media screen and (max-width: 768px) {
-    .container {
-      flex-direction: column;
-    }
-  
     .sidebar {
       display: none;
     }
@@ -117,4 +89,3 @@
       display: block;
     }
   }
-  
