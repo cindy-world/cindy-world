@@ -77,45 +77,16 @@
   
   /* ===== 메인 콘텐츠 영역 ===== */
   main {
-    padding: 2rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    min-height: calc(100vh - 120px);
+    min-height: auto;
   }
   
-  .main-image {
-    max-width: 320px;
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 1rem auto 0 auto;
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* ===== 푸터 박스 ===== */
-  .footer-box {
-    height: 60px;
-    background-color: #ffdce0;
-    margin-top: 2rem;
-  }
-  
-  /* ===== 반응형 - 모바일 레이아웃 조정 ===== */
-  @media screen and (max-width: 768px) {
-    .sidebar {
-      display: none;
-    }
-  
-    .mobile-category {
-      display: block;
-    }
-  }
-  
-
   /* === 강아지 말랑 애니메이션 === */
-@keyframes squishy {
+  @keyframes squishy {
     0% {
       transform: scale(1) rotate(0deg);
     }
@@ -141,7 +112,24 @@
     margin: 0 auto;
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    
-    /* 애니메이션 추가! */
     animation: squishy 4s ease-in-out infinite;
   }
+  
+  /* ===== 푸터 박스 ===== */
+  .footer-box {
+    height: 60px;
+    background-color: #ffdce0;
+    margin-top: 2rem;
+  }
+  
+  /* ===== 반응형 - 모바일 레이아웃 조정 ===== */
+  @media screen and (max-width: 768px) {
+    .sidebar {
+      display: none;
+    }
+  
+    .mobile-category {
+      display: block;
+    }
+  }
+  
