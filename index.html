@@ -4,31 +4,45 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>신디월드</title>
-  <link rel="icon" type="image/jpg" href="images/pion.png" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="pion.ico" type="image/x-icon" />
 </head>
 <body>
-  <div class="container">
-    <header class="header">
-      <img src="images/clogo.jpg" alt="Cindy World Logo" class="logo" />
-      <div class="banner-text">여기는, 뭐든 만들어내는 신디 나라</div>
-    </header>
+  <header class="top-header">
+    <img src="clogo.jpg" alt="신디 로고" class="logo" />
+    <h1 class="slogan">여기는, 뭐든 만들어내는 신디 나라</h1>
+  </header>
 
-    <nav class="nav">
-      <button class="tab active">홈</button>
-      <button class="tab">작업장</button>
-      <button class="tab">낙서장</button>
-      <button class="tab">꿈기록</button>
-      <button class="tab">비밀공간</button>
-    </nav>
+  <!-- 사이드 카테고리 (PC 전용) -->
+  <aside class="sidebar">
+    <ul>
+      <li>홈</li>
+      <li>작업장</li>
+      <li>낙서장</li>
+      <li>꿈기록</li>
+      <li>비밀공간</li>
+    </ul>
+  </aside>
 
-    <main class="main-content">
-      <img src="images/cindy_dog.jpg" alt="Cindy Dog" class="main-image" />
-    </main>
+  <!-- 모바일 카테고리 (모바일 전용) -->
+  <ul class="mobile-category">
+    <li>홈</li>
+    <li>작업장</li>
+    <li>낙서장</li>
+    <li>꿈기록</li>
+    <li>비밀공간</li>
+  </ul>
 
-    <footer class="footer">
-      <!-- 간단한 문구나 저작권 표기만 들어갈 수 있음 -->
-    </footer>
-  </div>
+  <!-- 메인 콘텐츠 영역 -->
+  <main>
+    <div class="main-box">
+      <img src="cindy_dog.png" alt="말랑 강아지" class="main-image" />
+    </div>
+  </main>
+
+  <!-- 푸터 (박스 영역) -->
+  <footer>
+    <div class="footer-box"></div>
+  </footer>
 </body>
 </html>
