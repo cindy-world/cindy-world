@@ -98,9 +98,11 @@ main {
   }
   
   .main-image {
+    max-width: 500px;
     width: 100%;
-    max-width: 500px; /* 너가 원하면 400px으로 줄여도 돼 */
     height: auto;
+    display: block;
+    margin: 0 auto;
     border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
